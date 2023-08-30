@@ -1,23 +1,23 @@
 package com.alvaro.principal;
 
+import com.alvaro.ope.matematicas.*;
+
 public class Partida {
 
+	
 	public static void main(String[] arg) {
 		
 		System.out.print("Mensaje de bienvenida \r\n");
 		
-		System.out.print("1\t\tUNO\r\n");
-		System.out.print("10\t\tDiez\r\n");
-		System.out.print("100000000000\tCien mil\r\n");
+		OperacionesMatematicas primeraInstancia = new OperacionesMatematicas();		
 		
+		int respuesta = primeraInstancia.sumaDosNumeros(15, 45);
 		
+		System.out.println(respuesta);
 		
-		
-		System.out.println("E:\\Mis Docs\\Curso Java Intermedio\\WORKSPACE 1");
-		
-		System.out.println(" -Juanito- exclamo -- \"AHHHHHHHHH\" ");
-		
-		System.out.print("!!!!");
+		System.out.println(primeraInstancia.sumaDosNumeros(15,15));
+		primeraInstancia.sumaDosNumerosJuego();
+		System.out.print("Despedida!!!!");
 		
 		
 	}
