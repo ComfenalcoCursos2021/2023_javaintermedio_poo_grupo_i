@@ -42,31 +42,34 @@ public class Main {
 		int opcion = 99;
 		
 		while(opcion != 3) {
-			//limpiador();
+			limpiador();
 			menu(normal.isEncendido());
 			System.out.println("Que quiere hacer?");
 			opcion = teclado.nextInt();
 			
 			if(opcion == 1) {				
-				if(normal.isEncendido()) {
+				if( normal.isEncendido() == true ) {
 					System.err.println("YA ESTA ENCENDIDO!!!!");
 				} else {
-					normal.encender();
+					
+					// cambiamos el valor de la variable encendido									
+					
 					System.out.println("Lo encendio");	
+					
 				}
 				
 			}
 			if(opcion == 2) {				
-				if(normal.isEncendido()) {
+				if(normal.isEncendido()) {				
+					
 					normal.apagar();
+					
 					System.out.println("Lo apago");	
 				} else {
-					System.err.println("YA ESTA APAGADO!!!!");
+					System.err.println("YA ESTA APAGADO, RECUERDE QUE EL MECANISMO DE EMERGENCIA DE ESTA CLASE DE BOMBILLOS SE ACTIVA UNICAMENTE SI SE INTENTA ENCENDER MAS DE 5 VECES SEGUIDAS, LO QUE DESENCADEARA QUE EL BOBILLO PARAPADE CONSTANTEMENTE !!!!");
 				}				
-			}	
+			}		
 			
-			System.out.println("Ingrese el numero 4 para continuar...");
-			char x = teclado.next().charAt(0);
 			
 		}
 		
