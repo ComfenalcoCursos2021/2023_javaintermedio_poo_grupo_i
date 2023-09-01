@@ -19,17 +19,15 @@ public class Main {
 		} 
 	}
 	
-	public static void menu(boolean estaEncendido) {
-		
+	public static void menu(boolean estaEncendido) {		
 		System.out.println("=================================");
-		System.out.println("===========menu principal========");
+		System.out.println("===========MENU PRINCIPAL========");
 		System.out.println("=================================");
 		
 		System.out.println("===========1. Encender ½=========");	
 		System.out.println("===========2. Apagar=============");		
 		System.out.println("===========3. Salir==============");
-		System.out.println("=============================v6==");
-		
+		System.out.println("=============================v7==");		
 	}
 	
 	
@@ -68,8 +66,7 @@ public class Main {
 				} else {
 					System.err.println("YA ESTA APAGADO, RECUERDE QUE EL MECANISMO DE EMERGENCIA DE ESTA CLASE DE BOMBILLOS SE ACTIVA UNICAMENTE SI SE INTENTA ENCENDER MAS DE 5 VECES SEGUIDAS, LO QUE DESENCADEARA QUE EL BOBILLO PARAPADE CONSTANTEMENTE !!!!");
 				}				
-			}		
-			
+			}			
 			
 		}
 		
