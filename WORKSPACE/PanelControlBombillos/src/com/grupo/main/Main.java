@@ -37,10 +37,13 @@ public class Main {
 		System.out.println("*                                ");
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		System.out.println("Bienvenida");
-		Bombillo normal = new Bombillo();
+		
+		Bombillo normal = new Bombillo("123456");
+		
+		
 		Scanner teclado = new Scanner(System.in);
 		String elMensaje="";
 		int opcion = 99;
@@ -50,9 +53,9 @@ public class Main {
 			menu(normal.isEncendido());
 			mensaje(elMensaje);
 			if(!normal.isEncendido())
-				System.out.println("\u001B[31m=========== Bombillo: Apagado ===\u001B[0m");
+				System.out.println("\u001B[31m=========== Bombillo /*"+normal.getNombre()+"*/: Apagado ===\u001B[0m");
 			if(normal.isEncendido())
-				System.out.println("\u001B[32m=========== Bombillo: Encendido =\u001B[0m");
+				System.out.println("\u001B[32m=========== Bombillo /*"+normal.getNombre()+"*/: Encendido =\u001B[0m");
 			System.out.println("Que quiere hacer?");
 			opcion = teclado.nextInt();
 			
