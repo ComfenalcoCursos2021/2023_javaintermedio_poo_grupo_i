@@ -9,20 +9,20 @@ public class Main {
 		Elemento b = new Elemento(20);
 		Elemento c = new Elemento(30);
 		Elemento d = new Elemento(40);
-		
+
 		System.out.println("empezando");
-		
 		a.setSiguiente(b);
-		
 		b.setSiguiente(c);
-		
 		c.setSiguiente(d);
 		
+		Elemento temporal = a;
 		
-		a.getSiguiente().getSiguiente().getSiguiente().getDato();
-		b.getSiguiente().getSiguiente().getDato();
-		c.getSiguiente().getDato();
-		
+		while (temporal.getSiguiente() != null) {
+			System.out.println("--->" + temporal.getDato());
+			temporal = temporal.getSiguiente();
+		}
+		System.out.println("--->" + temporal.getDato());
+
 		System.out.println("termino");
 	}
 
