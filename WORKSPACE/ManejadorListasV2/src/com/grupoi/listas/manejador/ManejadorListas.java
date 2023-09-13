@@ -41,18 +41,35 @@ public class ManejadorListas {
 				agregarALista();
 			} else if(opcion == 2) {
 				imprimirLista();
+			}else if(opcion == 3) {
+				borrarUltimoLista();
 			}
 			
 		}
 	}
 	private void imprimirLista() {
-		lista.imprimirPantalla();
+		if(lista.esVacia()) {
+			aviso = "LISTA VACIA";	
+		} else {
+			lista.imprimirPantalla();				
+		}
+		
 	}
 	private void agregarALista() {
 		System.out.println("Que numero quiere agregar?");
 		int nuevo = TECLADO.nextInt();
 		lista.agregar(nuevo);
 		aviso = "AGREGADO CON EXITO!!";
+	}
+	private void borrarUltimoLista() {
+		if(lista.esVacia()) {
+			aviso = "LISTA VACIA";	
+		} else {
+			lista.borrarUltimo();
+			aviso = "BORRADO CON EXITO!!";	
+		}
+		
+		
 	}
 
 }
