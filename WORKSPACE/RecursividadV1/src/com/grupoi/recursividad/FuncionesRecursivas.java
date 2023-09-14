@@ -10,9 +10,10 @@ public class FuncionesRecursivas {
 		return resultado;
 	}
 	public int factorialRecursivo(int numero) {
-		if(numero == 1) {
+		if(numero == 1 || numero == 0) {
 			return 1;
 		}
+		System.out.println(numero);
 		return numero * factorialRecursivo(numero-1);
 	}
 
