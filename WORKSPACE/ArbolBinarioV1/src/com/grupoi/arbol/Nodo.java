@@ -22,7 +22,5 @@ public class Nodo {
 	}
 	public void setMayor(Nodo mayor) {
 		this.mayor = mayor;
-	}
-	
-	
+	}	
 }
