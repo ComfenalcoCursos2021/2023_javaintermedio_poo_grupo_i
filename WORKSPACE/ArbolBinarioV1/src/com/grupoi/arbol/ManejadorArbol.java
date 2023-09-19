@@ -36,6 +36,7 @@ public class ManejadorArbol {
 	public void imprimir() {
 		this.imprimirNodo(raiz);
 	}
+	
 	private void imprimirNodo(Nodo nodo) {
 		if(nodo.getMenor() != null) {
 			imprimirNodo(nodo.getMenor());
@@ -45,9 +46,11 @@ public class ManejadorArbol {
 			imprimirNodo(nodo.getMayor());
 		}
 	}
+	
 	public void imprimirReverse() {
 		this.imprimirNodoReverse(raiz);
 	}
+	
 	private void imprimirNodoReverse(Nodo nodo) {
 		if(nodo.getMayor() != null) {
 			imprimirNodoReverse(nodo.getMayor());
