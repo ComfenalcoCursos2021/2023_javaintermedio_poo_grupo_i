@@ -4,6 +4,13 @@ public class BombilloSmartConSensor extends BombilloSmart {
 
 	private boolean sensorActivado;
 
+	
+	public BombilloSmartConSensor() {
+		System.out.println("Constructor del smart con sensor");
+		this.sensorActivado = true;	
+		this.color = "RojoBrillante";
+	}
+	
 	public boolean isSensorActivado() {
 		return sensorActivado;
 	}

@@ -7,7 +7,8 @@ public class BombilloSmart extends BaseBombillo {
 	private String clasificador;
 	
 	public BombilloSmart() {
-		this.color = "Rojo";
+		System.out.println("Constructor del smart");
+		this.color = "Verde";		
 	}
 	
 	public String getNombreWifi() {

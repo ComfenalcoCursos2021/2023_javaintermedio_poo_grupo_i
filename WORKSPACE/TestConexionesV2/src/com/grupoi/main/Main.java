@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		ConexionesManejador manejador = new ConexionesManejador();
-		IConexionGeneral con = manejador.getConexion(2);
+		IConexionGeneral con = manejador.getConexion(3);
 		con.conectar();
 
 	}

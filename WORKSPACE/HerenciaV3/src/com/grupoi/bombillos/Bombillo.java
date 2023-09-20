@@ -5,7 +5,8 @@ public class Bombillo extends BaseBombillo {
 	
 	
 	public Bombillo(String colorCompra) {
-		this.color = colorCompra;
+		System.out.println("Constructor del normal");
+		this.color = colorCompra;		
 	}
 	
 	
