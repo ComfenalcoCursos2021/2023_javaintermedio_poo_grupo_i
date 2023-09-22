@@ -36,18 +36,22 @@ public class ManejadorValdes {
 	public EstadoValdes pasarV1aV2SinTocar(EstadoValdes cualquiera) {
 		EstadoValdes elNuevo = new EstadoValdes();
 		elNuevo.setContenidoV1(cualquiera.getContenidoV1());
-		elNuevo.setContenidoV2(cualquiera.getContenidoV2());		
+		elNuevo.setContenidoV2(cualquiera.getContenidoV2());				
 		
-		
-		int cuantoPasar = this.capacidadV2 - elNuevo.getContenidoV2();	
-		elNuevo.setContenidoV1(elNuevo.getContenidoV1() - cuantoPasar);		
-		elNuevo.setContenidoV2(elNuevo.getContenidoV2() + cuantoPasar);
-		
+		this.pasarV1aV2(elNuevo);
 		
 		return elNuevo;
 	}
 	public void pasarV1aV2(EstadoValdes cualquiera) {
-		int cuantoPasar = this.capacidadV2 - cualquiera.getContenidoV2();	
+		int capacidadPasar = this.capacidadV2 - cualquiera.getContenidoV2();	
+		int cuantoPasar = 0;
+		
+		if(cualquiera.getContenidoV1() < capacidadPasar) {
+			cuantoPasar = cualquiera.getContenidoV1(); 
+		} else {
+			cuantoPasar = capacidadPasar;
+		}
+		
 		cualquiera.setContenidoV1(cualquiera.getContenidoV1() - cuantoPasar);		
 		cualquiera.setContenidoV2(cualquiera.getContenidoV2() + cuantoPasar);
 	}

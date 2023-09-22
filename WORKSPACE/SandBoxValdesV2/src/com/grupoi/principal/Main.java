@@ -27,8 +27,9 @@ public class Main {
 		System.out.println("-------------------------------");
 		System.out.println(b);
 		System.out.println(c);
-		manager.pasarV1aV2(c);
-		System.out.println(c);
+		
+		EstadoValdes d = manager.pasarV1aV2SinTocar(c);
+		System.out.println(d);
 		System.out.println("Termino!!!");
 
 	}
