@@ -63,4 +63,44 @@ public class ManejadorValdes {
 		this.llenarV2(elNuevo);
 		return elNuevo;
 	}
+	
+	public EstadoValdes pasarV2aV1sintocar(EstadoValdes cualquiera) {
+		EstadoValdes elNuevo = cualquiera.clon();				
+		
+		this.pasarV2aV1(elNuevo);
+		
+		return elNuevo;
+	}
+	public void pasarV2aV1(EstadoValdes cualquiera) {
+		int capacidadPasar = this.capacidadV1 - cualquiera.getContenidoV1();	
+		int cuantoPasar = 0;
+		
+		if(cualquiera.getContenidoV2() < capacidadPasar) {
+			cuantoPasar = cualquiera.getContenidoV2(); 
+		} else {
+			cuantoPasar = capacidadPasar;
+		}
+				
+		cualquiera.setContenidoV1(cualquiera.getContenidoV1() + cuantoPasar);
+		cualquiera.setContenidoV2(cualquiera.getContenidoV2() - cuantoPasar);
+	}
+	
+	public EstadoValdes VaciarV1Sintocar(EstadoValdes cualquiera) {
+		EstadoValdes vaciado = cualquiera.clon();
+		this.VaciarV1(vaciado);
+		return vaciado;
+	}
+	
+	public void VaciarV1(EstadoValdes cualquiera) {				
+		cualquiera.setContenidoV1(0);
+	}
+	
+	public EstadoValdes VaciarV2Sintocar(EstadoValdes cualquiera) {
+		EstadoValdes vaciado = cualquiera.clon();
+		this.VaciarV2(vaciado);
+		return vaciado;
+	}
+	public void VaciarV2(EstadoValdes cualquiera) {
+		cualquiera.setContenidoV2(0);
+	}
 }

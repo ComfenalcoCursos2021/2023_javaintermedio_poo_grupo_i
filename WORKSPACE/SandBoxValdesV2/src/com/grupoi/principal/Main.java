@@ -33,6 +33,20 @@ public class Main {
 		System.out.println("-------------------------------");
 		EstadoValdes d = manager.pasarV1aV2SinTocar(c);
 		System.out.println(d);
+		System.out.println("-------------------------------");
+		EstadoValdes g = new EstadoValdes(0, 5);
+		EstadoValdes h = manager.pasarV2aV1sintocar(g);
+		
+		System.out.println(g);
+		System.out.println(h);
+		System.out.println("__________________________________");
+		System.out.println(manager.getCapacidadV1());
+		EstadoValdes i = manager.VaciarV1Sintocar(h);
+		System.out.println(h);
+		System.out.println(i);
+		manager.VaciarV2(i);
+		System.out.println(i);
+		System.out.println(manager.getCapacidadV1());
 		System.out.println("Termino!!!");
 
 	}
