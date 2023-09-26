@@ -19,15 +19,18 @@ public class Main {
 		EstadoValdes a = new EstadoValdes(0, 0);
 		System.out.println(a);
 		manager.llenarV1(a);
+		
 		System.out.println(a);
 		System.out.println("-------------------------------");
 		EstadoValdes b = new EstadoValdes(0, 0);
 		System.out.println(b);
 		EstadoValdes c = manager.llenarV1SinTocar(b);
-		System.out.println("-------------------------------");
+		EstadoValdes f = manager.llenarV2SinTocar(b);
+		System.out.println("-----------------probando llenar--------------");
 		System.out.println(b);
 		System.out.println(c);
-		
+		System.out.println(f);
+		System.out.println("-------------------------------");
 		EstadoValdes d = manager.pasarV1aV2SinTocar(c);
 		System.out.println(d);
 		System.out.println("Termino!!!");

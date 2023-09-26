@@ -52,4 +52,15 @@ public class ManejadorValdes {
 		cualquiera.setContenidoV2(cualquiera.getContenidoV2() + cuantoPasar);
 	}
 	
+	
+	
+	public void llenarV2(EstadoValdes cualquiera) {
+		cualquiera.setContenidoV2(this.capacidadV2);
+	}
+	
+	public EstadoValdes llenarV2SinTocar(EstadoValdes cualquiera) {
+		EstadoValdes elNuevo = cualquiera.clon();
+		this.llenarV2(elNuevo);
+		return elNuevo;
+	}
 }
