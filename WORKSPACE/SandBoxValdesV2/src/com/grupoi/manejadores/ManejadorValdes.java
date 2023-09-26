@@ -25,18 +25,14 @@ public class ManejadorValdes {
 	}
 	
 	public EstadoValdes llenarV1SinTocar(EstadoValdes cualquiera) {
-		EstadoValdes elNuevo = new EstadoValdes();
-		elNuevo.setContenidoV1(cualquiera.getContenidoV1());
-		elNuevo.setContenidoV2(cualquiera.getContenidoV2());		
-		elNuevo.setContenidoV1(this.capacidadV1);		
+		EstadoValdes elNuevo = cualquiera.clon();		
+		this.llenarV1(elNuevo);		
 		return elNuevo;
 	}
 	
 	
 	public EstadoValdes pasarV1aV2SinTocar(EstadoValdes cualquiera) {
-		EstadoValdes elNuevo = new EstadoValdes();
-		elNuevo.setContenidoV1(cualquiera.getContenidoV1());
-		elNuevo.setContenidoV2(cualquiera.getContenidoV2());				
+		EstadoValdes elNuevo = cualquiera.clon();				
 		
 		this.pasarV1aV2(elNuevo);
 		

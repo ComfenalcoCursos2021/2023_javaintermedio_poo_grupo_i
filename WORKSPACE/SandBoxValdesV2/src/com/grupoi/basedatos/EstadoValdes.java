@@ -1,6 +1,6 @@
 package com.grupoi.basedatos;
 
-public class EstadoValdes {
+public class EstadoValdes implements Cloneable{
 
 	private int contenidoV1;
 	private int contenidoV2;
@@ -41,6 +41,13 @@ public class EstadoValdes {
 		} else {
 			return false;
 		}
+	}
+	
+	public EstadoValdes clon() {
+		EstadoValdes elClon = new EstadoValdes();
+		elClon.contenidoV1 = this.contenidoV1;
+		elClon.contenidoV2 = this.contenidoV2;
+		return elClon;
 	}
 
 }
