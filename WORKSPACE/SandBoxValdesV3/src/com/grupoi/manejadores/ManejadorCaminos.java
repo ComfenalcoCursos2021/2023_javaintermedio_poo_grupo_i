@@ -21,8 +21,14 @@ public class ManejadorCaminos {
 		nuevo.agregar(a);
 		this.caminos.add(nuevo);
 	}
+	public void agregarCamino(Camino a) {
+		this.caminos.add(a);
+	}
 	public ArrayList<Camino> getCaminos(){
 		return this.caminos;
+	}
+	public ArrayList<Camino> getCaminosActuales(){
+		return (ArrayList<Camino>) this.caminos.clone();
 	}
 	
 }

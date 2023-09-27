@@ -41,4 +41,14 @@ public class Camino {
 		
 		return nuevo;
 	}
+	public Camino clonSinUltimo() {
+		Camino nuevo = new Camino();
+		
+		for (EstadoValdes elemento : camino) {
+			nuevo.agregar(elemento.clon());
+		}
+		nuevo.camino.remove(nuevo.camino.size()-1);
+		
+		return nuevo;
+	}
 }

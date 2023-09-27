@@ -51,6 +51,15 @@ public class ManejadorValdes {
 		cualquiera.setContenidoV1(cualquiera.getContenidoV1() - cuantoPasar);		
 		cualquiera.setContenidoV2(cualquiera.getContenidoV2() + cuantoPasar);
 	}
+	public EstadoValdes pasarV2aV1SinTocar(EstadoValdes cualquiera) {
+		EstadoValdes elNuevo = cualquiera.clon();				
+		
+		this.pasarV2aV1(elNuevo);
+		
+		return elNuevo;
+	}
+	
+	
 	
 	
 	
