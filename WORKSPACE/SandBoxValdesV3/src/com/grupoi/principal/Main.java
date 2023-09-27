@@ -6,6 +6,7 @@ import com.grupoi.basedatos.Camino;
 import com.grupoi.basedatos.EstadoValdes;
 import com.grupoi.manejadores.ManejadorCaminos;
 import com.grupoi.manejadores.ManejadorValdes;
+import com.grupoi.manejadores.SolucionadorValdes;
 
 public class Main {
 
@@ -14,11 +15,15 @@ public class Main {
 		//testMetodosLlenado();
 		//testCamino();
 		//testManejadorCaminos();
-		testProcesarSiEsMeta();
+		//testProcesarSiEsMeta();
+		testSolucionar();
 		System.out.println("Termino!!!");
 
 	}
-	
+	public static void testSolucionar() {
+		SolucionadorValdes b = new SolucionadorValdes();
+		b.solucionar(5, 3, 4);
+	}
 	public static void testProcesarSiEsMeta() {
 		Scanner in = new Scanner(System.in);
 		int meta = in.nextInt();	

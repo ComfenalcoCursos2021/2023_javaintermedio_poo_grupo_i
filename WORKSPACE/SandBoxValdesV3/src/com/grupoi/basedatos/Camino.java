@@ -6,7 +6,8 @@ import java.util.List;
 public class Camino {
 
 	private List<EstadoValdes> camino;
-	
+
+
 	public Camino() {
 		this.camino = new ArrayList<EstadoValdes>();
 	}
@@ -24,5 +25,20 @@ public class Camino {
 			System.out.println(item);
 		}
 	}
-	
+	public EstadoValdes getUltimoEstadoValdes() {
+		if(camino.size() > 0) {
+			return camino.get(camino.size()-1);
+		}
+		return null;
+	}
+	public Camino clon() {
+		Camino nuevo = new Camino();
+		
+		for (EstadoValdes elemento : camino) {
+			nuevo.agregar(elemento.clon());
+		}
+		
+		
+		return nuevo;
+	}
 }
