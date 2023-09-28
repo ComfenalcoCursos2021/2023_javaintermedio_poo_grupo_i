@@ -21,8 +21,20 @@ public class Main {
 
 	}
 	public static void testSolucionar() {
+		
 		SolucionadorValdes b = new SolucionadorValdes();
-		b.solucionar(5, 3, 4);
+		Scanner in = new Scanner(System.in);
+		System.out.println("Ingrese la capacidad del primer valde");
+		int capacidad1 = in.nextInt();
+		System.out.println("Ingrese la capacidad del segundo valde");
+		int capacidad2 = in.nextInt();
+		System.out.println("Ingrese el valor de la meta");
+		int meta = in.nextInt();
+		while(meta > capacidad1 && meta > capacidad2) {
+			System.out.println("Agrege una meta que sea menor al valde de mayor capacidad");
+			meta = in.nextInt();
+		}
+		b.solucionar(capacidad1, capacidad2, meta);
 	}
 	public static void testProcesarSiEsMeta() {
 		Scanner in = new Scanner(System.in);
